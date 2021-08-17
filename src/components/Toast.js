@@ -27,10 +27,10 @@ const Toast = (props) => {
     const [open, setOpen] = useState(true)
     const {classes} = props
     const mounted = useRef()
-    let len = props.single_message.length
 
     const action = (
           <Button 
+          data-testid='xbutton'
           color='black' 
           size='small'
           onClick={() => {
@@ -65,7 +65,7 @@ const Toast = (props) => {
         return(
             <div>
             { 
-            len !== 0 
+            props.single_message !== undefined 
                 ?
                     <Snackbar open={open} 
                         anchorOrigin={{ vertical: 'top', horizontal: 'center' }} >

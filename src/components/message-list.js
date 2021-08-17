@@ -255,6 +255,7 @@ class MessageList extends Component {
               null}
           </Grid >
 
+            
           {this.state.messages.length !== 0 
             ? 
               <Toast messages={this.state.messages} single_message={this.state.errorToBeSentToChild} 

@@ -16,7 +16,7 @@ it("renders without crashing", () => {
 
 it("renders button correctly", () => {
     const {getByTestId} = render(<MessageList />)
-    // expect(getByTestId("clear-btn")).toHaveTextContent("CLEAR")
+    expect(getByTestId("clear-btn")).toHaveTextContent("CLEAR")
 })
 
 it("displays the count", () => {
@@ -40,6 +40,9 @@ it("clears DOM", () => {
     expect(getByTestId('error')).toBeEmptyDOMElement()
 })
 
-
+it("renders snackbar button correctly", () => {
+    const {getByTestId} = render(<Toast />)
+    expect(getByTestId("xbutton")).toHaveTextContent("X")
+})
 
 
