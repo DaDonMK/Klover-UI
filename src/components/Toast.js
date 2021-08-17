@@ -3,28 +3,29 @@ import React from 'react'
 import { useState, useEffect, useRef } from 'react'
 import Snackbar from '@material-ui/core/Snackbar';
 import SnackbarContent from '@material-ui/core/SnackbarContent'
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
-const useStyles = makeStyles((theme) => ({
+
+const styles = theme => ({
     root: {
       width: '100%',
       '& > * + *': {
-        marginTop: theme.spacing(2),
+          marginTop: '5px'
       },
     },
     snackbarStyleViaNestedContent: {
+        marginTop: '1rem',
         backgroundColor: '#F56236',
         color: 'black',
     }
-  }));
-  
-  
+  });
+
 const Toast = (props) => {
       
     var timeout
     const [open, setOpen] = useState(true)
-    const classes = useStyles()
+    const {classes} = props
     const mounted = useRef()
     let len = props.single_message.length
 
@@ -85,4 +86,4 @@ const Toast = (props) => {
 }
 
 
-export default Toast
+export default withStyles(styles)(Toast)

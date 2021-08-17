@@ -12,14 +12,21 @@
   "license": "No license",
   "dependencies": {
     "@material-ui/core": "^3.9.4",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@material-ui/styles": "^4.11.4",
     "chance": "^0.8.0",
     "lodash": "^4.17.21",
+    "material-ui": "^0.20.2",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-scripts": "^3.4.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@testing-library/react": "^12.0.0",
+    "jest-dom": "^4.0.0",
+    "react-test-renderer": "^17.0.2"
+  },
   "browserslist": {
     "production": [
       ">0.2%",

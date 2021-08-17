@@ -7,20 +7,20 @@ import { withStyles, makeStyles} from '@material-ui/core/styles';
 import Toast from './Toast'
 import Typography from '@material-ui/core/Typography';
 
-const styles = makeStyles(theme => ({
+const styles = theme => ({
 
   root2: {
     display: 'flex',
     flexGrow: 1,
     '& > *': {
-      margin: theme.spacing(1),
+      margin: '1%',
     },
     marginLeft: '10px'
   },
   paper: {
     margin: '10px', 
-    // padding: theme.spacing(2),
-    textAlign: 'center',
+    padding: '15px',
+    textAlign: 'left',
     color: theme.palette.text.secondary,
   },
   error: {
@@ -76,14 +76,14 @@ const styles = makeStyles(theme => ({
     zIndex: 1
   }
 
-  }))
+  })
 
 
-  const ColorButton = withStyles((theme) => ({
+const ColorButton = withStyles((theme) => ({
     globalButtonStyle: {
       right: '0',
     },
-  }))(Button);
+}))(Button);
 
 
 class MessageList extends Component {
@@ -97,7 +97,6 @@ class MessageList extends Component {
       error: [],
       warning: [],
       info : [],
-      // showToast: true,
       errorToBeSentToChild: []
     }
   }
