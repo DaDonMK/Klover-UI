@@ -43,11 +43,13 @@ const styles = theme => ({
     backgroundColor : '#88FCA3'
   },
   TopButtonsStop: {
-    right: '10px'
+    right: '10px',
+    marginBottom: '30px'
   },
 
   TopButtonsClear: {
-    left: '10px'
+    left: '10px',
+    marginBottom: '30px'
   },
 
   globalButtonStyle: {

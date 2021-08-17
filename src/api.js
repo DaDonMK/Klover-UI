@@ -29,8 +29,8 @@ class MessageGenerator {
       return
     }
     const message = this.chance.string()
-    const priority = 1
-    const nextInMS = lodash.random(500, 2200)
+    const priority = lodash.random(1, 3)
+    const nextInMS = lodash.random(500, 3000)
     this.messageCallback({
       message,
       priority,
