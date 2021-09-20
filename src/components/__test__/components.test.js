@@ -3,10 +3,25 @@ import ReactDOM from 'react-dom'
 import MessageList from './../message-list'
 import Toast from './../Toast'
 import { isTSAnyKeyword } from '@babel/types'
+import {start} from './../../api'
 import { render, fireEvent, cleanup} from '@testing-library/react'
 import "@testing-library/jest-dom/extend-expect"
 
 afterEach(cleanup)
+
+describe('start', () => {
+    it('calls generate function', () => {
+        const generate = jest.fn()
+        this.start()
+        expect(generate.mock.calls.length).toBe(1)
+    })
+})
+
+it("renders without crashing", () => { 
+    const div = document.createElement("div")
+    ReactDOM.render(<Toast></Toast>, div)
+    ReactDOM.unmountComponentAtNode(div)
+})
 
 it("renders without crashing", () => { 
     const div = document.createElement("div")
@@ -40,9 +55,6 @@ it("clears DOM", () => {
     expect(getByTestId('error')).toBeEmptyDOMElement()
 })
 
-it("renders snackbar button correctly", () => {
-    const {getByTestId} = render(<Toast />)
-    expect(getByTestId("xbutton")).toHaveTextContent("X")
-})
+
 
 

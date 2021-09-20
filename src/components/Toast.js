@@ -63,9 +63,6 @@ const Toast = (props) => {
         console.log(props.single_message)
         return(
             <div>
-            { 
-            props.single_message.length !== 0 
-                ?
                     <Snackbar open={open} 
                         anchorOrigin={{ vertical: 'top', horizontal: 'center' }} >
                             <SnackbarContent aria-describedby="message-id2"
@@ -74,12 +71,7 @@ const Toast = (props) => {
                                 message={props.single_message[0]}
                                 action={action}
                             />
-                    </Snackbar>
-
-                :
-                    null
-            }
-                
+                    </Snackbar>    
         </div>
     )
 }
